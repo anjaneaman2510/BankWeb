@@ -118,7 +118,6 @@ function setUserAcountDetails() {
     status.style.color = "#ff647c";
   }
 }
-
 function depositBalanceToUser(amount, pin) {
     const token=localStorage.getItem("jwtToken");
   const userData = JSON.parse(localStorage.getItem("userData"));
