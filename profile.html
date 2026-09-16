@@ -346,8 +346,8 @@ window.addEventListener("pageshow", function () {
                     <span>
                     <input
                         type="text"
-                        id="Username"
-                        value="AMAN ANJANE"
+                        id="name"
+                        value=""
                         placeholder="Enter your name"
                         disabled>
                          <button onclick="inputEnable1()"> ✏️ </button> 
@@ -361,8 +361,8 @@ window.addEventListener("pageshow", function () {
                      <span>
                     <input
                         type="text"
-                        id="number"
-                        value="1234567890"
+                        id="mobile"
+                        value=""
                         placeholder="Enter your name"
                         disabled>
                          <button onclick="inputEnable2()"> ✏️ </button> 
@@ -515,10 +515,10 @@ window.addEventListener("pageshow", function () {
 async function saveProfile(){
 
     const name =
-        document.getElementById("Username").value.trim();
+        document.getElementById("name").value.trim();
 
     const mobile =
-        document.getElementById("number").value.trim();
+        document.getElementById("mobile").value.trim();
 
     if(name === ""){
         showMessage("Please enter your name.");
@@ -556,9 +556,9 @@ if (data==true) {
 
     document.getElementById("avatar").innerText =name.charAt(0).toUpperCase();
     showMessage("Profile updated successfully!");
-    const a=document.getElementById("Username");
+    const a=document.getElementById("name");
     a.disabled=true;
-    const b=document.getElementById("number");
+    const b=document.getElementById("mobile");
     b.disabled=true;
 
 } else {
@@ -566,8 +566,6 @@ if (data==true) {
 }
    
 }
-
-
 function showMessage(text){
 
     const message =
@@ -598,7 +596,7 @@ function deleteAccount(){
     }
 }
 function inputEnable1(){
-    const a= document.getElementById("Username");
+    const a= document.getElementById("name");
     a.innerText=name;  
     a.disabled=false;
     a.focus();
@@ -606,8 +604,8 @@ function inputEnable1(){
       a.setSelectionRange(textLength, textLength);
 }
 function inputEnable2(){
-    const b= document.getElementById("number");
-    b.innerText="1234567890";  
+    const b= document.getElementById("mobile");
+  
     b.disabled=false;
     b.focus();
     const textLength = b.value.length;
